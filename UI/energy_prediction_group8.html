@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BOC Energy Prediction_Group 8</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!--<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+</head>
+<body>
+  <header><h3 style="height:10px;margin-left:60px">BOC Energy Prediction_Group8</h3></header><hr>
+
+<div style="height:450px;margin-left:60px">
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home"><h4>Visualization</h4></a></li>
+  <li><a data-toggle="tab" href="#menu1"><h4>Short-term Prediction</h4></a></li>
+  <li><a data-toggle="tab" href="#menu2"><h4>Long-term Prediction</h4></a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>Visualization-Tableau Public</h3>
+    <div class="form-group" style="height:60px;margin-left:20px">
+    <label class="col-sm-3 control-label" style="margin-top:10px">Please Choose Your Dataset</label>
+  <div class="col-sm-7">
+  <select id="dataset" class="form-control">
+  <option value="https://public.tableau.com/views/assignment3_14/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BCYF.CURLEY.CMTY.CTR.2014.csv</option>
+    <option value="https://public.tableau.com/views/Book6_721/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BPL.HARVARD.ST.2014.csv</option>
+  <option value="https://public.tableau.com/views/Book1_10214/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BFD.HEADQUARTERS.2014.csv</option>
+  <option value="https://public.tableau.com/views/assignment3_14/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-PROP.MGMT.43.HAWKINS.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.CAMPBELL.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-PWD_BLDG_2014/COB-PWD_BLDG_2014?:embed=y&:display_count=yes&:showTabs=y">COB-PWD.BLDG.2014.csv</option>
+  <option value="https://public.tableau.com/views/Book4_2320/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-DND.HEMENWAY.2014.csv</option>
+  <option value="https://public.tableau.com/views/Book5_963/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BPL.COPLEY.SQUARE.2014.csv</option>
+    <option value="https://public.tableau.com/shared/WRJPYDBC4?:display_count=yes">COB-BPD.HEADQUARTERS.D.2014.csv</option>
+
+<!--alterate-->
+  <option value="https://public.tableau.com/shared/WRJPYDBC4?:display_count=yes">COB-BPD.DUDLEY.SQ.2014.csv</option>
+  <option value="https://public.tableau.com/shared/WRJPYDBC4?:display_count=yes">COB-BPD.STATION.11.AREA.C.2014.csv</option>
+  <option value="https://public.tableau.com/views/Book6_721/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BPL.HYDE.PARK2014.csv</option>
+  <option value="https://public.tableau.com/views/Book6_721/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-BPL.MATTAPAN.2014.csv</option>
+  <option value="https://public.tableau.com/views/assignment3_14/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-PROP.MGMT.1481TREMONT.2014.csv</option>
+  <option value="https://public.tableau.com/views/assignment3_14/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-PROP.MGMT.CITY.HLL.SQ.2014.csv</option>
+  <option value="https://public.tableau.com/views/assignment3_14/Dashboard1?:embed=y&:display_count=yes&:showTabs=y">COB-PROP.MGMT_1481TREMONT_TOBIN.COMMUNITY.CENTER.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.Arts.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.BOSTON.LATIN.ANNX.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.CENTRAL.KITCHEN.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.COURT.ST.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.DEVER.MCCORMICK.2014.csv</option>
+  <option value="https://public.tableau.com/views/COB-SCH_CAMPBELL_2014/COB-SCH_CAMPBELL_2014?:embed=y&:display_count=yes&:showTabs=y">COB-SCH.DORCHESTER.HIGH.2014.csv</option>
+  </select>   
+    </div>
+       <div class="col-sm-2">
+      <input onclick="return chart();" type="submit" id="send" value="Choose" class="btn btn-primary">
+    </div>
+  </div>
+    <iframe id="tableau" src="" height="700" width="94%"></iframe>
+
+  </div>
+
+
+  <div id="menu1" class="tab-pane fade">
+    <h3>Short-term Prediction</h3><br/>
+  <div height="100%" width="20%" style="float:left">
+    <a><h4 onclick="return chart2()"><span class="glyphicon glyphicon-tint">&nbsp</span>KWh Prediction</h4></a><br/><br/>
+    <a><h4 onclick="return chart3()"><span class="glyphicon glyphicon-tint">&nbsp</span>Power Factor Prediction</h4></a><br/><br/>
+    <a><h4 onclick="return chart4()"><span class="glyphicon glyphicon-tint">&nbsp</span>KVARh Prediction</h4></a>
+  </div>
+  <div width="70%" style="margin-left:80px;margin-top:-50px">
+  <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPlease input or copy the url of the dataset you want to predict into below</h4>
+  <iframe src="http://energyconsumptionkwh102.azurewebsites.net/Default.aspx" id="predict" src="" height="2000" width="70%" style="margin-left:80px;border:none"></iframe>
+  </div>
+  </div>
+
+
+  <div id="menu2" class="tab-pane fade">
+    <h3>Long-term Prediction</h3><br/>
+    <!--<a href="">kWh</a><br/><br/>
+    <a href="">Power Factor</a><br/><br/>
+    <a href="">kVARh</a>-->
+  </div>
+</div>
+</div>
+
+<!--<footer align="center">
+  <i><small><a href="copyright.html">Copyright &copy; Data Science Group 8</a><br></i>
+  </footer>-->
+  <script>
+    function chart(){
+        var link=document.getElementById("dataset").value;
+        document.getElementById("tableau").src=link;
+    }
+    function chart2(){
+        var link2="http://energyconsumptionkwh102.azurewebsites.net/Default.aspx";
+        document.getElementById("predict").src=link2;
+    }
+    function chart3(){
+        var link3="http://energyconsumptionfactor100.azurewebsites.net/Default.aspx";
+        document.getElementById("predict").src=link3;
+    }
+    function chart4(){
+        var link4="http://energyconsumptionkvarh100.azurewebsites.net/Default.aspx";
+        document.getElementById("predict").src=link4;
+    }
+
+  </script>
+
+</body>
+</html>
